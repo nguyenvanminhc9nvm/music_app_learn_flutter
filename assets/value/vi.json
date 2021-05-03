@@ -1,0 +1,15 @@
+{
+  "title": "tiếng việt",
+  "title_sign_in": "Đăng nhập",
+  "label_email": "Email",
+  "hint_email": "Điền mail của bạn",
+  "label_password": "Mật khẩu",
+  "hint_pass": "Điền mật khẩu của bạn",
+  "label_forgot_pass": "Quên mật khẩu?",
+  "label_checked_member": "Nhớ tôi cho lần sau",
+  "label_login": "Đăng nhập",
+  "label_or": "Hoặc",
+  "label_option_sign_in": "Đăng nhập với",
+  "label_dnt_have_acc": "Không có tài khoản",
+  "label_sign_up": "Đăng ký"
+}
