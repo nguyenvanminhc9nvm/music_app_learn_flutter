@@ -40,6 +40,7 @@ class _LoginState extends BaseState<LoginScreen, LoginBloc> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.lightBlueAccent,
       body: SafeArea(
         child: Padding(
@@ -269,7 +270,7 @@ class _LoginState extends BaseState<LoginScreen, LoginBloc> {
                         child: ElevatedButton(
                           onPressed: () {},
                           child: Icon(
-                            Icons.social_distance,
+                            Icons.event,
                             color: Colors.black,
                           ),
                           style: ElevatedButton.styleFrom(
@@ -303,10 +304,6 @@ class _LoginState extends BaseState<LoginScreen, LoginBloc> {
             ],
           ),
         ));
-  }
-
-  String getString(String key) {
-    return AppLocalization.of(context).translate(key);
   }
 
   void triggerLogin() {

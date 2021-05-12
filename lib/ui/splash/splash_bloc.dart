@@ -14,9 +14,9 @@ class SplashBloc extends BaseBloc {
 
   void getFirstTimeLogin() {
     dataManager.getToken().listen((event) {
-      if (event.isNotEmpty) {
-        _isLogin.add(true);
-      }
+
+        _isFirstTime.add(true);
+
     });
   }
 

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base_by_minhnv/application.dart';
 import 'package:flutter_base_by_minhnv/ui/base/base_bloc.dart';
 
+import '../../utils/localize/AppLocalization.dart';
+
 abstract class BaseState<W extends StatefulWidget, B extends BaseBloc>
     extends State<W> {
   String titleScreen();
@@ -86,5 +88,15 @@ abstract class BaseState<W extends StatefulWidget, B extends BaseBloc>
         );
       },
     );
+  }
+
+  String getString(String key) {
+    return AppLocalization.of(context).translate(key);
+  }
+
+  @override
+  void dispose() {
+    bloc.dispose();
+    super.dispose();
   }
 }

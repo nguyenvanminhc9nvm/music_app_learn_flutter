@@ -5,7 +5,7 @@ import 'package:rxdart/subjects.dart';
 
 typedef AsyncCallback<T> = Function(T);
 
-abstract class BaseBloc {
+abstract class BaseBloc implements Disposable {
   final progressBar = PublishSubject<bool>();
   final trackingError = PublishSubject<String>();
   final dataManager = Application().dataManager;
@@ -31,6 +31,15 @@ abstract class BaseBloc {
     }
   }
 
+  @override
+  void dispose() {
+    trackingError.close();
+    progressBar.close();
+  }
+}
+
+abstract class Disposable {
+  void dispose();
 }
 class BlocProvider<T extends BaseBloc> extends StatefulWidget {
   BlocProvider({

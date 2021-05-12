@@ -7,6 +7,14 @@ class LoginBloc extends BaseBloc {
   final _loginSuccess = PublishSubject<bool>();
   Stream<bool> get loginSuccess => _loginSuccess;
 
+  final PublishSubject _triggerClick = PublishSubject<bool>();
+
+  LoginBloc() {
+    _triggerClick.listen((value) {
+
+    });
+  }
+
   Future<void> doLogin(String username, String pass) async {
     final reponse = await dataManager.doLogin(username, pass);
     if (reponse.isSuccess()) {

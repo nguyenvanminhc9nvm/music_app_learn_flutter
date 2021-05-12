@@ -4,6 +4,7 @@ import 'package:flutter_base_by_minhnv/data/local/database/app_database/db_helpe
 import 'package:flutter_base_by_minhnv/data/local/pref/app_preferences.dart';
 import 'package:flutter_base_by_minhnv/data/local/pref/preferences.dart';
 import 'package:flutter_base_by_minhnv/data/model/api/base_response.dart';
+import 'package:flutter_base_by_minhnv/data/model/api/list_response.dart';
 import 'package:flutter_base_by_minhnv/data/model/api/login/sign_in_response.dart';
 import 'package:flutter_base_by_minhnv/data/model/on_boarding.dart';
 import 'package:flutter_base_by_minhnv/data/remote/app_api_helper.dart';
@@ -29,9 +30,7 @@ class AppDataManager extends DataManager {
   }
 
   @override
-  Future<void> saveToken(String? token) {
-    return _preferences.saveToken(token);
-  }
+  Future<void> saveToken(String? token) => _preferences.saveToken(token);
 
   @override
   Stream<String> getToken() {
@@ -62,7 +61,12 @@ class AppDataManager extends DataManager {
   }
 
   @override
-  Future<BaseResponse> doLogin(String username, String pass) {
+  Future<BaseResponse<SignInResponse>> doLogin(String username, String pass) {
     return _apiHelper.doLogin(username, pass);
+  }
+
+  @override
+  Stream<BaseResponse<List<Product>>> doGetList() {
+    return _apiHelper.doGetList();
   }
 }
