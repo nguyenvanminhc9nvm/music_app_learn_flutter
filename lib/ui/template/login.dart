@@ -27,7 +27,7 @@ class _LoginState extends BaseState<LoginScreen, LoginBloc> {
   @override
   void onListenerStream() {
     bloc.loginSuccess.listen((event) {
-        Navigator.pushReplacementNamed(context, AppConstant.homeScreen);
+        Navigator.pushReplacementNamed(context, AppConstant.viewPerson);
     });
   }
 

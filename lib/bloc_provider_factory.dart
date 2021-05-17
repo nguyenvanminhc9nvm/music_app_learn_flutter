@@ -1,5 +1,7 @@
 import 'package:flutter_base_by_minhnv/ui/base/base_bloc.dart';
+import 'package:flutter_base_by_minhnv/ui/main/add_person/add_person_bloc.dart';
 import 'package:flutter_base_by_minhnv/ui/main/home_bloc.dart';
+import 'package:flutter_base_by_minhnv/ui/main/view_person/view_person_bloc.dart';
 import 'package:flutter_base_by_minhnv/ui/onborading/onborading_bloc.dart';
 import 'package:flutter_base_by_minhnv/ui/splash/splash_bloc.dart';
 import 'package:flutter_base_by_minhnv/ui/template/login_bloc.dart';
@@ -15,6 +17,10 @@ class BlockProviderFactory {
         return OnBoardingBloc() as B;
       case HomeBloc:
         return HomeBloc() as B;
+      case AddPersonBloc:
+        return AddPersonBloc() as B;
+      case ViewPersonBloc:
+        return ViewPersonBloc() as B;
       default:
         throw "Unknown block class: $type";
     }

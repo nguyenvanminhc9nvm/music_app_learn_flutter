@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_base_by_minhnv/application.dart';
 import 'package:flutter_base_by_minhnv/data/model/api/base_response.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:rxdart/subjects.dart';
 
 typedef AsyncCallback<T> = Function(T);
@@ -9,6 +10,7 @@ abstract class BaseBloc implements Disposable {
   final progressBar = PublishSubject<bool>();
   final trackingError = PublishSubject<String>();
   final dataManager = Application().dataManager;
+  final CompositeSubscription compositeSubscription = CompositeSubscription();
 
   void coroutineScope<T>(Future<T> asyncCallback, AsyncCallback<T> response,
       {bool isShowLoading = true}) async {
@@ -35,6 +37,7 @@ abstract class BaseBloc implements Disposable {
   void dispose() {
     trackingError.close();
     progressBar.close();
+    compositeSubscription.dispose();
   }
 }
 

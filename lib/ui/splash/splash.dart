@@ -29,7 +29,7 @@ class _SplashState extends BaseState<SplashScreen, SplashBloc> {
         }
     });
     bloc.isLogin.listen((event) {
-        Navigator.pushReplacementNamed(context, AppConstant.homeScreen);
+        Navigator.pushReplacementNamed(context, AppConstant.viewPerson);
     });
 
   }
@@ -43,6 +43,8 @@ class _SplashState extends BaseState<SplashScreen, SplashBloc> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
+      color: Colors.white,
+      alignment: Alignment.center,
       child: Text("Splash"),
     );
   }

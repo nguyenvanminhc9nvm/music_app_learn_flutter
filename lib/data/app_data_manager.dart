@@ -1,6 +1,7 @@
 import 'package:flutter_base_by_minhnv/data/data_manager.dart';
 import 'package:flutter_base_by_minhnv/data/local/database/app_database/app_db_helper.dart';
 import 'package:flutter_base_by_minhnv/data/local/database/app_database/db_helper.dart';
+import 'package:flutter_base_by_minhnv/data/local/database/entity/person.dart';
 import 'package:flutter_base_by_minhnv/data/local/pref/app_preferences.dart';
 import 'package:flutter_base_by_minhnv/data/local/pref/preferences.dart';
 import 'package:flutter_base_by_minhnv/data/model/api/base_response.dart';
@@ -68,5 +69,15 @@ class AppDataManager extends DataManager {
   @override
   Stream<BaseResponse<List<Product>>> doGetList() {
     return _apiHelper.doGetList();
+  }
+
+  @override
+  Future<List<Person>> findAllPerson() {
+    return _dbHelper.findAllPerson();
+  }
+
+  @override
+  Stream<bool> insertPerson(Person person) {
+    return _dbHelper.insertPerson(person);
   }
 }

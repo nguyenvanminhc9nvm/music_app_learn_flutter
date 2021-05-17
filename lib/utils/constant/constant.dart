@@ -10,4 +10,6 @@ class AppConstant {
   static final onBoardingScreen = "lib/ui/onborading/onborading.dart";
   static final loginScreen = "lib/ui/template/login.dart";
   static final homeScreen = "lib/ui/main/home.dart";
+  static final addPerson = "addPerson";
+  static final String viewPerson = "viewPerson";
 }
