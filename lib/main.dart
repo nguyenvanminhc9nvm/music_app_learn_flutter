@@ -1,18 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_base_by_minhnv/application.dart';
-import 'package:flutter_base_by_minhnv/data/local/database/app_database/app_database.dart';
-import 'package:flutter_base_by_minhnv/ui/main/add_person/add_person.dart';
-import 'package:flutter_base_by_minhnv/ui/main/home.dart';
-import 'package:flutter_base_by_minhnv/ui/main/view_person/view_person.dart';
-import 'package:flutter_base_by_minhnv/ui/onborading/onborading.dart';
 import 'package:flutter_base_by_minhnv/ui/splash/splash.dart';
-import 'package:flutter_base_by_minhnv/ui/template/login.dart';
-import 'package:flutter_base_by_minhnv/utils/constant/constant.dart';
 import 'package:flutter_base_by_minhnv/utils/localize/AppLocalization.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
+
+import 'ui/splash/splash.dart';
 
 void main() async {
 
@@ -27,12 +20,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
-        AppConstant.onBoardingScreen: (BuildContext context) =>
-            new OnBoardingScreen(),
-        AppConstant.loginScreen: (BuildContext context) => new LoginScreen(),
-        AppConstant.homeScreen: (BuildContext context) => HomeScreen(),
-        AppConstant.addPerson: (BuildContext context) => AddPerson(),
-        AppConstant.viewPerson: (BuildContext context) => ViewPerson(),
 
       },
       supportedLocales: [Locale("vi", "VN"), Locale("en", "US")],
@@ -66,7 +53,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
+      home: Splash(),
     );
   }
 }
