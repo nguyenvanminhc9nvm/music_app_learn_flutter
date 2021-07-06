@@ -35,6 +35,6 @@ class _SplashState extends BaseState<Splash, SplashBloc> {
 
   @override
   void onListenerStream() {
-
+    
   }
 }
