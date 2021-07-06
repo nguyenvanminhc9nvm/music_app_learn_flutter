@@ -49,19 +49,6 @@ class AppDataManager extends DataManager {
   }
 
   @override
-  Future<List<OnBoarding>> getListOnBoarding() {
-    final listOnBoarding = [
-      OnBoarding(1, "this is title", AppConstant.onBoardingFirstImg,
-          "Được dịch từ tiếng Anh-Một mạo từ là bất kỳ thành viên nào của một nhóm các từ chuyên dụng được sử dụng với các cụm danh từ"),
-      OnBoarding(2, "this is title 2", AppConstant.onBoardingSecondImg,
-          "Được dịch từ tiếng Anh-Một mạo từ là bất kỳ thành viên nào của một nhóm các từ chuyên dụng được sử dụng với các cụm danh từ"),
-      OnBoarding(3, "this is title 3", AppConstant.onBoardingThirdImg,
-          "Được dịch từ tiếng Anh-Một mạo từ là bất kỳ thành viên nào của một nhóm các từ chuyên dụng được sử dụng với các cụm danh từ"),
-    ];
-    return Future.value(listOnBoarding);
-  }
-
-  @override
   Future<BaseResponse<SignInResponse>> doLogin(String username, String pass) {
     return _apiHelper.doLogin(username, pass);
   }

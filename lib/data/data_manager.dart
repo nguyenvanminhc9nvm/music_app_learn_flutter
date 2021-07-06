@@ -4,5 +4,5 @@ import 'package:flutter_base_by_minhnv/data/model/on_boarding.dart';
 import 'package:flutter_base_by_minhnv/data/remote/api_helper.dart';
 
 abstract class DataManager implements ApiHelper, Preferences, DbHelper {
-  Future<List<OnBoarding>> getListOnBoarding();
+
 }

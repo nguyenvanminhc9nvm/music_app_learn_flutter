@@ -7,10 +7,6 @@ import '../../utils/localize/AppLocalization.dart';
 
 abstract class BaseState<W extends StatefulWidget, B extends BaseBloc>
     extends State<W> {
-  String titleScreen();
-
-  Widget? createBodyWidget();
-
   late B bloc;
   late BuildContext mContext;
   final blocFactory = Application().blockProviderFactory;
@@ -33,19 +29,6 @@ abstract class BaseState<W extends StatefulWidget, B extends BaseBloc>
       showMyDialog(value);
     });
     super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(titleScreen()),
-      ),
-      body: BlocProvider(
-        child: createBodyWidget()!,
-        bloc: bloc,
-      ),
-    );
   }
 
   void showLoading() async {
@@ -98,5 +81,11 @@ abstract class BaseState<W extends StatefulWidget, B extends BaseBloc>
   void dispose() {
     bloc.dispose();
     super.dispose();
+  }
+
+  bool isDarkMode() {
+    var brightness = MediaQuery.of(context).platformBrightness;
+    bool darkModeOn = brightness == Brightness.dark;
+    return darkModeOn;
   }
 }
