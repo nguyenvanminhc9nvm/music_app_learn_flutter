@@ -1,12 +1,14 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_base_by_minhnv/ui/main/main.dart';
+import 'package:flutter_base_by_minhnv/ui/on_broading/on_broading.dart';
 import 'package:flutter_base_by_minhnv/ui/splash/splash.dart';
 import 'package:flutter_base_by_minhnv/utils/localize/AppLocalization.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'ui/splash/splash.dart';
+import 'utils/constant/constant.dart';
 
 void main() async {
 
@@ -23,7 +25,8 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         routes: <String, WidgetBuilder>{
-
+          onBoarding: (context) => OnBoarding(),
+          mainScreen: (context) => MainScreen()
         },
         supportedLocales: [Locale("vi", "VN"), Locale("en", "US")],
         localizationsDelegates: [

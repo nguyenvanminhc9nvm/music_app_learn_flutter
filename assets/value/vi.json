@@ -1,15 +1,8 @@
 {
-  "title": "tiếng việt",
-  "title_sign_in": "Đăng nhập",
-  "label_email": "Email",
-  "hint_email": "Điền mail của bạn",
-  "label_password": "Mật khẩu",
-  "hint_pass": "Điền mật khẩu của bạn",
-  "label_forgot_pass": "Quên mật khẩu?",
-  "label_checked_member": "Nhớ tôi cho lần sau",
-  "label_login": "Đăng nhập",
-  "label_or": "Hoặc",
-  "label_option_sign_in": "Đăng nhập với",
-  "label_dnt_have_acc": "Không có tài khoản",
-  "label_sign_up": "Đăng ký"
+  "name_app": "iPlayMusic",
+  "ob_title_1": "Where Words Fail,\nMusic Speaks",
+  "ob_title_2": "No Music\nNo Life",
+  "ob_title_3": "Peace.Love\nMusic",
+  "ob_article_1": "Vivamus auctor dui dignissim, sollicitudin nunc ac, aliquam justo. Vestibulum pellentesque lacinia eleifend.",
+  "lt_title": "Latest Trends"
 }

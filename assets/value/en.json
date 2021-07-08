@@ -1,15 +1,8 @@
 {
-  "title": "english",
-  "title_sign_in": "Sign In",
-  "label_email": "Email",
-  "hint_email": "Enter your Email",
-  "label_password": "Password",
-  "hint_pass": "Enter your password",
-  "label_forgot_pass": "Forgot Password?",
-  "label_checked_member": "Remember me",
-  "label_login": "Login",
-  "label_or": "OR",
-  "label_option_sign_in": "Sign in with",
-  "label_dnt_have_acc": "Don't have an account",
-  "label_sign_up": "Sign Up"
+  "name_app": "iPlayMusic",
+  "ob_title_1": "Where Words Fail,\nMusic Speaks",
+  "ob_title_2": "No Music\nNo Life",
+  "ob_title_3": "Peace.Love\nMusic",
+  "ob_article_1": "Vivamus auctor dui dignissim, sollicitudin nunc ac, aliquam justo. Vestibulum pellentesque lacinia eleifend.",
+  "lt_title": "Latest Trends"
 }
