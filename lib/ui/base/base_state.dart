@@ -88,4 +88,7 @@ abstract class BaseState<W extends StatefulWidget, B extends BaseBloc>
     bool darkModeOn = brightness == Brightness.dark;
     return darkModeOn;
   }
+
+  Color gradient1 = Color.fromRGBO(238, 9, 121, 1);
+  Color gradient2 = Color.fromRGBO(255, 106, 0, 1);
 }

@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_base_by_minhnv/ui/main/main.dart';
 import 'package:flutter_base_by_minhnv/ui/on_broading/on_broading.dart';
 import 'package:flutter_base_by_minhnv/ui/splash/splash.dart';
@@ -11,7 +12,10 @@ import 'ui/splash/splash.dart';
 import 'utils/constant/constant.dart';
 
 void main() async {
-
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor: Colors.white, // navigation bar color
+    statusBarColor: Colors.white, // status bar color
+  ));
   runApp(MyApp());
 }
 
@@ -19,6 +23,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return ScreenUtilInit(
       designSize: Size(375, 812),
       builder: () => MaterialApp(

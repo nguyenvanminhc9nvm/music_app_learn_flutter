@@ -74,6 +74,13 @@ flutter:
     - assets/drawable/light/on_boarding_1.png
     - assets/drawable/light/on_boarding_2.png
     - assets/drawable/light/on_boarding_3.png
+    - assets/drawable/ic_edm.png
+    - assets/drawable/ic_indie_rock.png
+    - assets/drawable/ic_user1.png
+    - assets/drawable/ic_user2.png
+    - assets/drawable/ic_user3.png
+    - assets/drawable/ic_trend1.png
+    - assets/drawable/ic_trend2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
